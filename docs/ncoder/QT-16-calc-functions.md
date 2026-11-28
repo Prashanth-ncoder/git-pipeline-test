@@ -13,8 +13,8 @@ Source: `calc.py` as it exists on `origin/qa/nonsf-review-1`. The story branch (
 
 - Returns `price - price * percent / 100`: the price after a percent discount.
 - `discount(100, 10)` returns `90.0`.
-- No range check is applied. `discount(100, 150)` returns `-50.0` and `discount(100, -10)` returns `110.0`. Whether these inputs are valid is an open question (see the design document).
+- No range check is applied. `discount(100, 150)` returns `-50.0` and `discount(100, -10)` returns `110.0`. Whether these inputs are valid is an open question for the story owner; the code does not define it.
 
 ## Verification
 
-Both assertions in `test_calc.py` (`average([2, 4]) == 3`, `discount(100, 10) == 90`) were run against this copy and pass.
+Both test functions in `test_calc.py` were run against this copy with `python3 -c "import test_calc; test_calc.test_average(); test_calc.test_discount()"` in a scratch folder outside the repository; both passed.
